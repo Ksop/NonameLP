@@ -1,0 +1,26 @@
+.clearfix() {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.remove-last-r-margin {
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.small-underline {
+  &:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 10px;
+  }
+}

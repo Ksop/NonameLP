@@ -1,0 +1,49 @@
+.projects {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.projects__title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2.222em;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 1.333em;
+    height: 0.044em;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 0.556em;
+  }
+}
+
+//1200 = 320 * 3 + gutter
+
+.projects__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.projects__list-item {
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(30deg);
+
+  a {
+    display: block;
+    transform: rotate(-30deg);
+  }
+}
+

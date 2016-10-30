@@ -1,0 +1,40 @@
+.main-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99999; //выше всего
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: url('../../img/bg-main-nav-shadow.png');
+  background-size: 85% auto;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+
+.main-nav__list-item {
+
+  margin-right: 50px;
+  .remove-last-r-margin();
+
+  a {
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.688em;
+    font-weight: normal;
+    font-style: normal;
+    color: @main-color;
+    text-decoration: none;
+    display: block;
+    padding-top: 0.8em;
+    padding-bottom: 0.5em;
+  }
+
+}

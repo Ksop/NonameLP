@@ -1,0 +1,25 @@
+.btn {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+  color: @main-color;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.2em 2em;
+  border: 0.08px solid @secondary-color;
+  transition: all 200ms ease-in-out;
+
+  &--bg-blue {
+    background: @secondary-color;
+  }
+
+  &:hover {
+    color: @secondary-color;
+    background-color: @main-color;
+    border-color: @main-color;
+  }
+}
