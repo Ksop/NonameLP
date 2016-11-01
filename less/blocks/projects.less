@@ -1,53 +1,53 @@
 .projects {
-  font-size: 1.8rem;
   padding-top: 2.778em;
   padding-bottom: 2.778em;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 .projects__title {
-  text-align: center;
   margin-top: 0;
   margin-bottom: 2.222em;
+  text-align: center;
 
   &:after {
-    content: '';
     display: block;
+    content: '';
     width: 1.333em;
     height: 0.044em;
-    background: #fff;
     margin: 0 auto;
     margin-top: 0.556em;
+    background: #fff;
   }
 }
 
 //1200 = 320 * 3 + gutter
 
 .projects__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
+  margin-bottom: 5.556em;
   padding: 0;
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 5.556em;
 }
 
 .projects__list-item {
-  width: 14.444em;
-  height: 14.444em;
-  overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 14.444em;
+  height: 14.444em;
+  overflow: hidden;
   transform: rotate(30deg);
-  position: relative;
 }
 
 .projects__item-link {
-  transform: rotate(-30deg);
-  text-decoration: none;
   color: @main-color;
+  text-decoration: none;
+  transform: rotate(-30deg);
 
   &:hover .projects__item-descr {
     transform: translate(-50%, -50%)
@@ -62,35 +62,36 @@
   left: 50%;
   width: 150%;
   height: 150%;
-  transform: translate(-50%, -50%)
-             scale(0);
-  background: rgba(40, 47, 53, .8);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  background: rgba(40, 47, 53, .8);
+  transform: translate(-50%, -50%)
+             scale(0);
+  
+  //горизонтальная черточка
   &:after {
-    content: '';
     display: block;
     width: 1.778em;
     height: 0.111em;
     background: #fff;
+    content: '';
   }
 }
 
 .projects__descr-category {
+  display: block;
   font-size: 1em;
   line-height: 1.5em;
   font-family: Arial, sans-serif;
   text-transform: uppercase;
-  display: block;
 }
 
 .projects__descr-name {
-  font-size: 1.556em;
-  line-height: 1.5em;
   margin-top: 0;
   margin-bottom: 0.536em;
+  font-size: 1.556em;
+  line-height: 1.5em;
 }
 

@@ -1,0 +1,87 @@
+.portfolio-wrapper {
+  position: relative;
+  width: 81.25em;
+  height: 37.5em;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+.portfolio {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+}
+
+.portfolio__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.portfolio__list-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37.5em;
+  height: 31.25em;
+  overflow: hidden;
+  transform: skew(-30deg);
+}
+
+.portfolio__item-link {
+  transform: skewX(30deg);
+  color: @main-color;
+  text-decoration: none;
+
+  &:hover .portfolio__item-descr {
+    opacity: 1;
+  } 
+}
+
+.portfolio__item-descr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%; 
+  background: rgba(47, 161, 229, .8);
+  transform: translate(-50%, -50%);
+  transition: all 400ms ease-in-out;
+  opacity: 0;
+
+  // иконка "Play"
+  &:after {
+    position: absolute;
+    top: 450px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    content: '';
+  }
+}
+
+.portfolio__list-item:first-child
+.portfolio__item-link:hover
+.portfolio__item-descr:after {
+  left: 58%;
+}
+
+.portfolio__list-item:nth-child(2)
+.portfolio__item-link:hover
+.portfolio__item-descr:after {
+  left: 50%;
+  margin-left: -15px;
+}
+
+.portfolio__list-item:last-child
+.portfolio__item-link:hover
+.portfolio__item-descr:after {
+  left: 39%;
+}
