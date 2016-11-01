@@ -1,7 +1,7 @@
 .portfolio-wrapper {
   position: relative;
   width: 81.25em;
-  height: 37.5em;
+  height: 31.1em;
   margin: 0 auto;
   overflow: hidden;
   font-size: 1em;
@@ -44,6 +44,9 @@
   } 
 }
 
+/* 
+** На случай, если нужно будет описание
+ */
 .portfolio__item-descr {
   position: absolute;
   top: 50%;
@@ -67,6 +70,12 @@
   }
 }
 
+
+/* 
+** позиционирование иконок "Play"
+** по центру. Флексбоксы центруют 
+** только средний item из-за skew
+ */
 .portfolio__list-item:first-child
 .portfolio__item-link:hover
 .portfolio__item-descr:after {
