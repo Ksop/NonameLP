@@ -1,6 +1,7 @@
 .projects {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  font-size: 1.8rem;
+  padding-top: 2.778em;
+  padding-bottom: 2.778em;
   text-align: center;
 }
 
@@ -29,21 +30,67 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 5.556em;
 }
 
 .projects__list-item {
-  width: 260px;
-  height: 260px;
+  width: 14.444em;
+  height: 14.444em;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   transform: rotate(30deg);
+  position: relative;
+}
 
-  a {
-    display: block;
-    transform: rotate(-30deg);
+.projects__item-link {
+  transform: rotate(-30deg);
+  text-decoration: none;
+  color: @main-color;
+
+  &:hover .projects__item-descr {
+    transform: translate(-50%, -50%)
+               scale(1);
+    transition: all 400ms ease-in-out;
   }
+}
+
+.projects__item-descr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%)
+             scale(0);
+  background: rgba(40, 47, 53, .8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 1.778em;
+    height: 0.111em;
+    background: #fff;
+  }
+}
+
+.projects__descr-category {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  display: block;
+}
+
+.projects__descr-name {
+  font-size: 1.556em;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0.536em;
 }
 
