@@ -1,6 +1,8 @@
 .projects {
   padding-top: 2.778em;
   padding-bottom: 2.778em;
+  padding-left: 2.7em;
+  padding-right: 2.7em;
   font-size: 1.8rem;
   text-align: center;
 }
@@ -38,10 +40,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 14.444em;
-  height: 14.444em;
+  width: 12.444em;
+  height: 12.444em;
   overflow: hidden;
   transform: rotate(30deg);
+}
+
+@media (max-width: 1099px) {
+  .projects__list-item {
+    width: 10.444em;
+    height: 10.444em;
+  }
 }
 
 .projects__item-link {

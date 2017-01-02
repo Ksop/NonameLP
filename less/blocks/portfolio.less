@@ -1,18 +1,29 @@
+.portfolio-outer {
+  position: relative;
+  font-size: 1rem;
+}
+
+@media (max-width: 1279px) {
+  .portfolio-outer {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 10em;
+  }
+}
+
 .portfolio-wrapper {
   position: relative;
-  width: 81.25em;
-  height: 31.1em;
-  margin: 0 auto;
+  min-height: 55em;
   overflow: hidden;
-  font-size: 1em;
 }
 
 .portfolio {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1em;
+  transform: translate(-50%, -50%) 
+             skewX(-30deg);
+  font-size: 1rem;
 }
 
 .portfolio__list {
@@ -23,74 +34,89 @@
   list-style-type: none;
 }
 
+/*
+Позиционирование внутри flex-элементов
+сделано на абсолютах, потому что вложенные
+флексбоксы при наведении начинают дергаться
+*/
 .portfolio__list-item {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 37.5em;
-  height: 31.25em;
+  width: 50em;
+  height: 55em;
   overflow: hidden;
-  transform: skew(-30deg);
-}
 
-.portfolio__item-link {
-  transform: skewX(30deg);
-  color: @main-color;
-  text-decoration: none;
-
-  &:hover .portfolio__item-descr {
+  &:hover .portfolio__item-link:after,
+  &:hover .portfolio__item-link:before {
     opacity: 1;
-  } 
-}
+  }
 
-/* 
-** На случай, если нужно будет описание
- */
-.portfolio__item-descr {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%; 
-  background: rgba(47, 161, 229, .8);
-  transform: translate(-50%, -50%);
-  transition: all 400ms ease-in-out;
-  opacity: 0;
+  &:hover .portfolio__item-link:before {
+    transform: scale(1);
+  }
 
-  // иконка "Play"
-  &:after {
-    position: absolute;
-    top: 450px;
-    display: block;
-    width: 30px;
-    height: 30px;
-    background: #fff;
-    content: '';
+  &:first-child .portfolio__item-link:before {
+    left: 53%;
+  }
+
+  &:nth-child(2) .portfolio__item-link:before {
+    left: 48%;
+  }
+
+  &:nth-child(3) .portfolio__item-link:before {
+    left: 42%;
   }
 }
 
-
-/* 
-** позиционирование иконок "Play"
-** по центру. Флексбоксы центруют 
-** только средний item из-за skew
- */
-.portfolio__list-item:first-child
-.portfolio__item-link:hover
-.portfolio__item-descr:after {
-  left: 58%;
+@media (max-width: 1279px) {
+  .portfolio__list-item {
+    width: 54em;
+  }
 }
 
-.portfolio__list-item:nth-child(2)
-.portfolio__item-link:hover
-.portfolio__item-descr:after {
+.portfolio__item-link {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  margin-left: -15px;
+  display: block;
+  transform: translate(-50%, -50%) skewX(30deg);
+
+  //голубой фон
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(47, 161, 229, .8);
+    transition: opacity 400ms ease-in-out;
+    opacity: 0;
+  }
+
+  // иконка "Play"
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 47%;
+    width: 60px;
+    height: 71px;
+    transform: translate(-50%, -50%)
+               scale(0);
+    transition: transform 200ms ease-in-out;
+    background-image: url('../img/spritesheet.png');
+    .stitches-sprite(-10px, -590px, 60px, 71px);
+    opacity: 0;
+  }
 }
 
-.portfolio__list-item:last-child
-.portfolio__item-link:hover
-.portfolio__item-descr:after {
-  left: 39%;
+.portfolio-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

@@ -1,4 +1,5 @@
-/* Навигацию располагаем 
+/* 
+** Навигацию располагаем 
 ** на самом верхнем слое.
 */
 .main-nav {
@@ -6,15 +7,17 @@
   top: 0;
   z-index: 99999;
   width: 100%;
+  font-size: 1.6rem;
 }
 
 .main-nav__list {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  background: url('../../img/bg-main-nav-shadow.png');
+  background: url('../img/bg-main-nav-shadow.png');
   background-size: 85% auto;
   background-position: 50% 100%;
   background-repeat: no-repeat;
@@ -23,19 +26,37 @@
 
 
 .main-nav__list-item {
-  margin-right: 50px;
-  .remove-last-r-margin();
 
   a {
-    display: block;
-    padding-top: 0.8em;
-    padding-bottom: 0.5em;
+    display: inline-block;
+    vertical-align: top;
+    padding: .8em .5em .5em .5em;
     color: @main-color;
     font-family: Arial, sans-serif;
-    font-size: 1.6rem;
+    font-size: 1em;
     line-height: 1.688em;
     font-weight: normal;
     font-style: normal;
     text-decoration: none;
   }
 }
+
+@media @tablet-width {
+  .main-nav__list-item {
+    margin-right: 2.6em;
+    .remove-last-r-margin();
+
+    a {
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media @desktop-width {
+  .main-nav__list-item {
+    margin-right: 4.6em;
+  }
+}
+
+
+

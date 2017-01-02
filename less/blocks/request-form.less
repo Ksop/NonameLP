@@ -1,0 +1,111 @@
+.request-form-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 550px;
+  animation-name: showForm;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  box-shadow: 0 2px 50px rgba(60, 175, 243, .4);
+}
+
+@keyframes showForm {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.request-form-close {
+  position: absolute;
+  top: 0;
+  right: -4em;
+  width: 4em;
+  height: 4em;
+  font-size: 1rem;
+  transition: transform 400ms ease;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: .3em;
+    background-color: #fff;
+    transform-origin: 50% 50%;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) 
+               rotate(45deg);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) 
+               rotate(-45deg);
+  }
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+.request-form {
+  padding: 3em;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  color: @dark-blue;
+  background-color: #fff;
+}
+
+.request-form__title {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: @dark-blue;
+}
+
+.request-form label {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0.625em;
+}
+
+.request-form input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.625em 0.938em;
+  margin-bottom: 1em;
+  border: 0.063em solid @secondary-color;
+  outline: 0;
+  transition: border 300ms ease;
+}
+
+.request-form input:focus {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.request-form__submit {
+  width: 100%;
+  padding: 0.625em 0.938em;
+  font-size: 1em;
+  color: @main-color;
+  background-color: @secondary-color;
+
+  &:hover {
+    color: @main-color;
+    border-color: transparent;
+    background-color: darken(@secondary-color, 10%);
+  }
+}

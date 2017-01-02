@@ -6,17 +6,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    svgstore: {
-      options: {
-        svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG 
-          style: 'display: none;',
-          xmlns: 'http://www.w3.org/2000/svg'
-        }
-      },
-      default : {
-        files: {
-          'build/img/icon-sprite.svg': ['img/icons/svg-sprite/*.svg'],
-        }
+    uglify: {
+      js: {
+        files: [{
+          'build/js/main.min.js': [
+            'libs/jquery-2.1.4.min.js', 
+            'libs/owl.carousel.min.js', 
+            'libs/particles.min.js', 
+            'js/script.js'
+          ]
+        }]
       }
     },
 
@@ -44,6 +43,7 @@ module.exports = function(grunt) {
       }
     },
 
+
     postcss: {
       options: {
         processors: [
@@ -57,6 +57,7 @@ module.exports = function(grunt) {
       }
     },
 
+
     css_mqpacker: {
       main: {
         options: {
@@ -68,6 +69,7 @@ module.exports = function(grunt) {
         dest: 'build/css/'
       }
     },
+
 
     cssmin: {
       target: {
@@ -81,6 +83,7 @@ module.exports = function(grunt) {
       }
     },
 
+
     copy: {
       build: {
         files: [{
@@ -88,7 +91,7 @@ module.exports = function(grunt) {
           src: [
             'fonts/**',
             'img/**',
-            'js/**',
+            'js/*.json',
             '*.html'
           ],
           dest: 'build/'
@@ -100,19 +103,14 @@ module.exports = function(grunt) {
           src: ['*.html'],
           dest: 'build/'
         }]
-      },
-      js: {
-        files: [{
-          expand: true,
-          src: ['js/*.js'],
-          dest: 'build/'
-        }]
       }
     },
+
 
     clean: {
       build: ['build']
     },
+
 
     watch: {
       html: {
@@ -121,7 +119,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['js/**/*.js'],
-        tasks: ['copy:js']
+        tasks: ['uglify:js']
       },
       css: {
         files: ['less/**/*.less'],
@@ -129,12 +127,13 @@ module.exports = function(grunt) {
       }
     },
 
+
     browserSync: {
       bsFiles: {
         src : [
           'build/*.html',
           'build/css/*.css',
-          'build/js/'
+          'build/js/*.js'
         ]
       },
       options: {
@@ -146,10 +145,11 @@ module.exports = function(grunt) {
 
 
 
-  grunt.registerTask('server', ['browserSync','watch']);
+  grunt.registerTask('server', ['browserSync', 'watch']);
   grunt.registerTask('build', [
     'clean',
     'copy',
+    'uglify',
     'less', 
     'postcss', 
     'css_mqpacker', 

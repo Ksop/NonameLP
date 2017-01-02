@@ -1,29 +1,27 @@
 .intro {
   position: relative;
   font-size: 1.6rem;
-  padding-top: 13.625em;
+  padding-top: 10.625em;
   padding-bottom: 5em;
-  background: url(../../img/bg-intro.jpg) no-repeat;
-  background-position: 50% 100%;
+  background: url('../img/bg-intro.jpg') no-repeat;
+  background-position: 70% 100%;
   background-size: cover;
 }
 
 .intro__list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 0;
-  margin-bottom: 9.500em;
+  align-items: center;
+  margin: 0 0 4.5em 0;
   padding: 0;
   list-style-type: none;
-
-  &-item { width: 21.875em; }
 }
 
+.intro__list-item { width: 21.875em; }
+
 .intro__item-title {
-  padding-left: 1.667em;
-  margin-top: 0;
-  margin-bottom: 0.333em;
+  margin: 0 0 0.333em 0;
   font-size: 2.813em;
   line-height: 1.5em;
 }
@@ -39,4 +37,106 @@
   .small-underline();
 }
 
-.intro__btn { text-align: center; }
+.intro__btn {
+  position: relative;
+  text-align: center; 
+}
+
+@media @mobile-width-only {
+  .intro__list-item {
+    text-align: center;
+    margin-bottom: 2.273em;
+  }
+
+  .intro__item-title::before {
+    display: none;
+  }
+
+  .intro__item-descr::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  .intro {
+    background-position: 50% 100%;
+  }
+}
+
+@media @tablet-width {
+  .intro__list {
+    flex-direction: row;
+    margin: 0 0 9.5em 0;
+  }
+
+  .intro__list-item {
+    margin-right: 3em;
+    .remove-last-r-margin();
+  }
+
+  .intro__item-title {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url(../img/spritesheet.png);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .intro__item-title--icon-mouse {
+    padding-left: 1.267em;
+
+    &:before {
+      top: -0.3em;
+      left: 0;
+      width: 35px;
+      height: 63px;
+      .stitches-sprite(-10px, -266px, 35px, 63px); //x, y, width, height
+    }
+  }
+
+  .intro__item-title--icon-pen {
+    padding-left: 1.667em;
+
+    &:before {
+      top: 0.2em;
+      left: 0;
+      width: 43px;
+      height: 45px;
+      .stitches-sprite(-10px, -409px, 43px, 45px); //x, y, width, height
+    }
+  }
+
+  .intro__item-title--icon-monitor {
+    padding-left: 1.667em;
+
+    &:before {
+      top: 0.3em;
+      left: 0;
+      width: 47px;
+      height: 36px;
+      .stitches-sprite(-10px, -210px, 47px, 36px); //x, y, width, height
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 979px) {
+  .intro__item-title--icon-pen::before { top: 0.05em; }
+  .intro__item-title--icon-mouse::before { top: -0.4em; }
+}
+
+@media @desktop-width {
+  .intro__item-title--icon-mouse::before { top: -0.2em; }
+}
+
+
+
+
+
+
+
+

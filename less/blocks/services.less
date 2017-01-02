@@ -13,7 +13,7 @@
     float: right;
     width: 19.444em;
     height: 30em;
-    margin-right: 100px; //чтобы при повороте list-item'a, он подровнялся по center-wrapper
+    margin-right: 8.125em; //чтобы при повороте list-item'a, блок подровнялся по center-wrapper
   }
 }
 
@@ -30,25 +30,12 @@
   margin-bottom: 1.111em;
 }
 
-.services__link {
-  display: block;
-  margin-bottom: 50px;
-  color: @secondary-color;
-  font-size: 1em;
-  line-height: 1.5em;
-
-  &:last-child { margin-bottom: 0; }
-}
-
-//350 = 170 + 170 + 5
-//540 = 170 * 3 + 10 * 3
-
 .services__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 605px; 
+  height: 37.813em; 
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -82,12 +69,60 @@
 
     &:before {
       display: block;
-      width: 35px;
-      height: 35px;
-      margin: 0 auto;
+      margin-right: auto;
+      margin-left: auto;
       margin-bottom: 5px;
-      background: @secondary-color;
+      background-image: url('../img/spritesheet.png');
+      background-repeat: no-repeat;
       content: '';
     }
+  }
+}
+
+.services__item-text--icon-graphic {
+  &:before {
+    width: 32px;
+    height: 21px;
+    .stitches-sprite(-10px, -114px, 32px, 21px);
+  }
+}
+
+.services__item-text--icon-mark {
+  &:before {
+    width: 33px;
+    height: 35px;
+    .stitches-sprite(-10px, -155px, 33px, 35px);
+  }
+}
+
+.services__item-text--icon-arrows {
+  &:before {
+    width: 28px;
+    height: 23px;
+    .stitches-sprite(-10px, -10px, 28px, 23px);
+  }
+}
+
+.services__item-text--icon-compass {
+  &:before {
+    width: 27px;
+    height: 41px;
+    .stitches-sprite(-10px, -53px, 27px, 41px);
+  }
+}
+
+.services__item-text--icon-pencil {
+  &:before {
+    width: 35px;
+    height: 45px;
+    .stitches-sprite(-10px, -525px, 35px, 45px);
+  }
+}
+
+.services__item-text--icon-pen {
+  &:before {
+    width: 29px;
+    height: 31px;
+    .stitches-sprite(-10px, -474px, 29px, 31px);
   }
 }

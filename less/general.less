@@ -4,6 +4,26 @@ html {
   font-size: 10px;
 }
 
+@media (max-width: 767px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 979px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 1199px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+
+
 body {
   font-family: "Inconsolata", serif;
   font-size: 1.6rem;
@@ -11,7 +31,7 @@ body {
   color: #fff;
   font-weight: normal;
   font-style: normal;
-  background: #1c1c20;
+  background: #1C1C20;
 }
 
 h2 {
@@ -32,19 +52,35 @@ h3 {
   color: @main-color;
 }
 
-.bg-general {
-  background: url('../../img/bg-general.jpg') no-repeat;
-  background-position: 0 0;
+.bg-blue-cloud {
+  background-image: url(../img/bg-blue-cloud.jpg);
+  background-repeat: no-repeat;
   background-size: 100% auto;
+  background-position: 0 40%;
+}
+
+.particles {
+  position: relative;
+  height: 138.75em;
+}
+
+.particles-inner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .layout-center-wrapper {
   width: 100%;
-  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media (min-width: 1280px) {
   .layout-center-wrapper {
     width: 75em;
+    margin: 0 auto;
   }  
 }

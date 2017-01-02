@@ -1,118 +1,107 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <title>Noname LP</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
 
-  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/main.min.js"></script>
 </head>
 
 <body>
-
+  
   <div class="layout-center-wrapper">
-      
+
     <!--~~~~~     PAGE HEADER     ~~~~~-->
     <header class="page-header">
       <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__list-item"><a href="#">Why us?</a></li>
-          <li class="main-nav__list-item"><a href="#">Case stydies</a></li>
-          <li class="main-nav__list-item"><a href="#">Video portfolio</a></li>
-          <li class="main-nav__list-item"><a href="#">Testimonials</a></li>
-          <li class="main-nav__list-item"><a href="#">Who we are?</a></li>
-          <li class="main-nav__list-item"><a href="#">Services</a></li>
-          <li class="main-nav__list-item"><a href="#">Contact us</a></li>
+          <li class="main-nav__list-item"><a href="#features">Why us?</a></li>
+          <li class="main-nav__list-item"><a href="#services">Services</a></li>
+          <li class="main-nav__list-item"><a href="#projects">Case stydies</a></li>
+          <li class="main-nav__list-item"><a href="#portfolio">Video portfolio</a></li>
+          <li class="main-nav__list-item"><a href="#testimonials">Testimonials</a></li>
         </ul>
       </nav>
     </header>
     <!--~~~~~     / PAGE HEADER     ~~~~~-->
 
   </div>
-  <!-- center wrapper end -->
 
 
 
-  <!--~~~~~~     INTRO     ~~~~~-->
+  <!--~~~~~     INTRO     ~~~~~-->
   <div class="intro">
 
     <div class="layout-center-wrapper">
 
       <ul class="intro__list">
-
         <li class="intro__list-item">
-          <h3 class="intro__item-title">Digital</h3>
+          <h3 class="intro__item-title  intro__item-title--icon-mouse">Digital</h3>
           <p class="intro__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla quis turpis cursus pharetra.</p>
         </li>
 
         <li class="intro__list-item">
-          <h3 class="intro__item-title">Creative</h3>
+          <h3 class="intro__item-title  intro__item-title--icon-pen">Creative</h3>
           <p class="intro__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla quis turpis cursus pharetra.</p>
         </li>
 
         <li class="intro__list-item">
-          <h3 class="intro__item-title">Media</h3>
+          <h3 class="intro__item-title  intro__item-title--icon-monitor">Media</h3>
           <p class="intro__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla quis turpis cursus pharetra.</p>
         </li>
-
       </ul>
 
 
       <div class="intro__btn">
-        <a href="#" class="btn">Request consultation</a>
+        <a href="#" class="btn  js-show-form" data-active="false">Request consultation</a>
       </div>
 
     </div>
     <!-- center wrapper end -->
 
   </div>
-  <!--~~~~~~      / INTRO     ~~~~~-->
+  <!--~~~~~   / INTRO     ~~~~~-->
 
   
 
-  <div class="bg-general">
+  <div id="particles" class="particles  bg-blue-cloud">
 
-    <div class="layout-center-wrapper">
+    <div class="particles-inner  layout-center-wrapper">
 
-      <!--~~~~~~      FEATURES     ~~~~~-->
-      <section class="features">
+      <!--~~~~~      FEATURES     ~~~~~-->
+      <section id="features" class="features">
 
         <h2 class="features__title">Why us?</h2>
 
-
         <ul class="features__list">
           <li class="features__list-item">
-            <h3 class="features__item-title">Digital strategy?</h3>
+            <h3 class="features__item-title  features__item-title--icon-mouse">Digital strategy?</h3>
             <p class="features__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla quis turpis cursus pharetra.
-            <a href="#" class="features__read-more">Read more</a></p>
+            <a class="features__link">Read more</a></p>
           </li>
 
           <li class="features__list-item">
-            <h3 class="features__item-title">Need a video?</h3>
+            <h3 class="features__item-title  features__item-title--icon-tv">Need a video?</h3>
             <p class="features__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla quis turpis cursus pharetra.
-            <a href="#" class="features__read-more">Read more</a></p>
+            <a class="features__link">Read more</a></p>
           </li>
 
           <li class="features__list-item">
-            <h3 class="features__item-title">Full solution</h3>
+            <h3 class="features__item-title  features__item-title--icon-arrows">Full solution</h3>
             <p class="features__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla quis turpis cursus pharetra.
-            <a href="#" class="features__read-more">Read more</a></p>
+            <a class="features__link">Read more</a></p>
           </li>
         </ul>
 
       </section>
-      <!--~~~~~     / FEATURES     ~~~~~-->
-
-    </div>
-    <!-- center wrapper end -->
+      <!--~~~~~    / FEATURES     ~~~~~-->
 
 
-
-    <div class="layout-center-wrapper">
     
-      <!-- SERVICES -->
-      <section class="services">
+      <!--~~~~~      SERVICES      ~~~~~-->
+      <section id="services" class="services">
     
         <div class="services__left-col">
           <h2 class="services__title">We believe research is a form of creating new knowledge.</h2>
@@ -120,41 +109,54 @@
           <p class="services__descr">
             Our eBook explains all the essentials that you will require to get the valuation of your company to start sky rocketting!
           </p>
-          <a href="#" class="services__link">Download eBook</a>
           
           <p class="services__descr">
             Success starts by correcting your mistakes, and we’ll show you how! Watch our short video tutorial to avoid the five basic mistakes entrepreneurs do.
           </p>
-          <a href="#" class="services__link">Watch video</a>
         </div>
     
     
         <div class="services__right-col">
           <ul class="services__list">
-            <li class="services__list-item"><span>Data analysis</span></li>
-            <li class="services__list-item"><span>Global promotions</span></li>
-            <li class="services__list-item"><span>Premium online and offline placements</span></li>
-            <li class="services__list-item"><span>Strategic development</span></li>
-            <li class="services__list-item"><span>Creative expertise</span></li>
-            <li class="services__list-item"><span>Scripting, production and post</span></li>
+            <li class="services__list-item">
+              <span class="services__item-text--icon-graphic">Data analysis</span>
+            </li>
+
+            <li class="services__list-item">
+              <span  class="services__item-text--icon-mark">Global promotions</span>
+            </li>
+
+            <li class="services__list-item">
+              <span  class="services__item-text--icon-arrows">Premium online and offline placements</span>
+            </li>
+
+            <li class="services__list-item">
+              <span  class="services__item-text--icon-compass">Strategic development</span>
+            </li>
+
+            <li class="services__list-item">
+              <span  class="services__item-text--icon-pencil">Creative expertise</span>
+            </li>
+
+            <li class="services__list-item">
+              <span  class="services__item-text--icon-pen">Scripting, production and post</span>
+            </li>
           </ul>
         </div>
     
       </section>
-      <!-- / SERVICES -->
+      <!--~~~~~    / SERVICES     ~~~~~-->
     
 
 
-      <!-- PROJECTS -->
-      <section class="projects">
+      <!--~~~~~      PROJECTS     ~~~~~-->
+      <section id="projects" class="projects">
 
         <h2 class="projects__title">Our case studies</h2>
 
-
         <ul class="projects__list">
-
           <li class="projects__list-item">
-            <a href="#" class="projects__item-link">
+            <a class="projects__item-link">
               <img src="img/photo-projects-cola.jpg" width="640" height="480" alt="Glass of cola">
 
               <div class="projects__item-descr">
@@ -165,7 +167,7 @@
           </li>
         
           <li class="projects__list-item">
-            <a href="#" class="projects__item-link">
+            <a class="projects__item-link">
               <img src="img/photo-projects-imac.jpg" width="504" height="423" alt="Imac">
               
               <div class="projects__item-descr">
@@ -176,7 +178,7 @@
           </li>
         
           <li class="projects__list-item">
-            <a href="#" class="projects__item-link">
+            <a class="projects__item-link">
               <img src="img/photo-projects-phones.jpg" width="750" height="370" alt="Nokia phones">
 
               <div class="projects__item-descr">
@@ -187,7 +189,7 @@
           </li>
 
           <li class="projects__list-item">
-            <a href="#" class="projects__item-link">
+            <a class="projects__item-link">
               <img src="img/photo-projects-beer.jpg" alt="Some Beer">
 
               <div class="projects__item-descr">
@@ -196,174 +198,196 @@
               </div>
             </a>
           </li>
-
         </ul>
 
-
-        <a href="#" class="btn  btn--bg-blue">Explore more case stydies</a>
+        <a class="btn  btn--bg-blue">Explore more case stydies</a>
 
       </section>
-      <!-- / PROJECTS -->
+      <!--~~~~~    / PROJECTS     ~~~~~-->
 
     </div>
-    <!-- center wrapper end -->
+    <!-- / center wrapper -->
 
   </div>
-  <!-- bg general end -->
+  <!-- / blue bg -->
 
 
-
-  <div class="portfolio-wrapper">
-
-    <!-- PORTFOLIO -->
-    <div class="portfolio">
-    
-      <ul class="portfolio__list">
-        <li class="portfolio__list-item">
-          <a href="#" class="portfolio__item-link">
-            <img src="img/photo-portfolio-mountains.jpg" alt="Mountains">
-
-            <div class="portfolio__item-descr"></div>
-          </a>
-        </li>
-    
-        <li class="portfolio__list-item">
-          <a href="#" class="portfolio__item-link">
-            <img src="img/photo-portfolio-fire.jpg" alt="Fire">
-            
-            <div class="portfolio__item-descr"></div>
-          </a>
-        </li>
-    
-        <li class="portfolio__list-item">
-          <a href="#" class="portfolio__item-link">
-            <img src="img/photo-portfolio-canyon.jpg" alt="Canyon">
-            
-            <div class="portfolio__item-descr"></div>
-          </a>
-        </li>        
-      </ul>
-    
-    </div>
-    <!-- / PORTFOLIO -->
-
-  </div>
-
-
-
-  <!-- TESTIMONIALS -->
-  <div class="testimonials">
-
-    <ul class="testimonials__list">
-
-      <li class="testimonials__list-item">
-        <div class="layout-center-wrapper">
-
-          <img src="img/man-face.png" alt="Man">
-
-          <p class="testimonials__comment">
-            “You know that feeling of trust that job will be done perfectly. That’s how it was working with CompanyName. They knew exactly what we wanted.”
-          </p>
-
-          <p class="testimonials__author">
-            - Michael Dawson, San Francisco, CA -
-          </p>
-
-        </div>
-        <!-- center wrapper end -->
-      </li>
-
-    </ul>
-    
-    
-    <div class="bullets">
-      <ul class="bullets__list">
-        <li class="bullets__item  bullets__item--active"></li>
-        <li class="bullets__item"></li>
-        <li class="bullets__item"></li>
-      </ul>
-    </div>
-
-  </div>
-  <!-- / TESTIMONIALS -->
-
-
-
-  <!-- CALL TO ACTION -->
-  <div class="call-to-action">
-    <a href="#" class="call-to-action__link">Request consultation</a>
-  </div>
-  <!-- / CALL TO ACTION -->
-
-
-
-<div class="footer-wrapper">
 
   <div class="layout-center-wrapper">
 
-    <!-- FOOTER -->
-    <footer class="page-footer">
+    <!--~~~~~      PORTFOLIO OUTER    ~~~~~-->
+    <div id="portfolio-outer" class="portfolio-outer">
 
-      <div class="page-footer__column">      
-        <h3 class="page-footer__column-title">Who we are?</h3>
+      <div class="portfolio-wrapper">
       
-        <ul class="page-footer__links-list">
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Our clients</a></li>
-          <li><a href="#">Press releases</a></li>
-          <li><a href="#">Video portfolio</a></li>
-          <li><a href="#">Contact us</a></li>
-        </ul>      
+        <div id="portfolio" class="portfolio">
+        
+          <ul class="portfolio__list">
+            <li class="portfolio__list-item">
+              <a href="https://www.youtube.com/embed/GfTBEZP09D8?autoplay=1" class="portfolio__item-link">
+                <img src="img/photo-portfolio-mountains.jpg" alt="Mountains">
+              </a>
+            </li>
+        
+            <li class="portfolio__list-item">
+              <a href="https://www.youtube.com/embed/LO5rHS1C-60?autoplay=1" class="portfolio__item-link">
+                <img src="img/photo-portfolio-fire.jpg" alt="Fire">
+              </a>
+            </li>
+        
+            <li class="portfolio__list-item">
+              <a href="https://www.youtube.com/embed/YRLw55eGMn8?autoplay=1" class="portfolio__item-link">
+                <img src="img/photo-portfolio-canyon.jpg" alt="Canyon">
+              </a>
+            </li>        
+          </ul>
+        
+        </div>
+        <!-- / portfolio -->
+      
       </div>
-      
-      
-      <div class="page-footer__column">      
-        <h3 class="page-footer__column-title">How we work?</h3>
-      
-        <ul class="page-footer__links-list">
-          <li><a href="#">Strategy</a></li>
-          <li><a href="#">Creative</a></li>
-          <li><a href="#">Media</a></li>
-          <li><a href="#">Ebooks & publishes</a></li>
-          <li><a href="#">Press</a></li>
-        </ul>      
-      </div>
-      
-      
-      <div class="page-footer__column">      
-        <h3 class="page-footer__column-title">Terms & Polices</h3>
-      
-        <ul class="page-footer__links-list">
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Terms & conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>      
-      </div>
-      
-      
-      <div class="page-footer__column">      
-        <h3 class="page-footer__column-title">Social</h3>
-      
-        <ul class="page-footer__links-list">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Tumblr</a></li>
-        </ul>      
-      </div>
+      <!-- / portfolio-wrapper -->
 
-    </footer>
-    <!-- / FOOTER -->
+    </div>
+    <!--~~~~~    / PORTFOLIO OUTER    ~~~~~-->
+
+
+
+    <!--~~~~~~      TESTIMONIALS WRAP    ~~~~~-->
+    <div class="testimonials-wrap">
+
+      <div id="testimonials" class="testimonials">
+      
+        <div class="testimonials__item">
+      
+          <img src="img/man-face.png" alt="Man">
+      
+          <p class="testimonials__comment">
+            “You know that feeling of trust that job will be done perfectly. That’s how it was working with CompanyName. They knew exactly what we wanted.”
+          </p>
+      
+          <p class="testimonials__author">
+            - Michael Dawson, San Francisco, CA -
+          </p>
+      
+        </div>
+        <!-- / item -->
+      
+      
+        <div class="testimonials__item">
+      
+          <img src="img/man-face.png" alt="Man">
+      
+          <p class="testimonials__comment">
+            “You know that feeling of trust that job will be done perfectly. That’s how it was working with CompanyName. They knew exactly what we wanted.”
+          </p>
+      
+          <p class="testimonials__author">
+            - Michael Dawson, San Francisco, CA -
+          </p>
+      
+        </div>
+        <!-- / item -->
+      
+      
+        <div class="testimonials__item">
+      
+          <img src="img/man-face.png" alt="Man">
+      
+          <p class="testimonials__comment">
+            “You know that feeling of trust that job will be done perfectly. That’s how it was working with CompanyName. They knew exactly what we wanted.”
+          </p>
+      
+          <p class="testimonials__author">
+            - Michael Dawson, San Francisco, CA -
+          </p>
+      
+        </div>
+        <!-- / item -->
+      
+      </div>
+      <!-- / testimonials -->
+
+    </div>
+    <!--~~~~~~    / TESTIMONIALS WRAP    ~~~~~-->
+
+
+
+    <!-- CALL TO ACTION -->
+    <div class="call-to-action  js-show-form">
+      <a href="#" class="call-to-action__link">Request consultation</a>
+    </div>
+    <!-- / CALL TO ACTION -->
+
+
+    
+    <!--~~~~~~     FOOTER WRAPPER    ~~~~~-->
+    <div class="footer-wrapper">
+
+      <!-- page footer -->
+      <footer id="page-footer" class="page-footer">
+
+        <div class="page-footer__column">      
+          <h3 class="page-footer__column-title">Who we are?</h3>
+        
+          <ul class="page-footer__links-list">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Our clients</a></li>
+            <li><a href="#">Press releases</a></li>
+            <li><a href="#">Video portfolio</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>      
+        </div>
+        
+        
+        <div class="page-footer__column">      
+          <h3 class="page-footer__column-title">How we work?</h3>
+        
+          <ul class="page-footer__links-list">
+            <li><a href="#">Strategy</a></li>
+            <li><a href="#">Creative</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Ebooks & publishes</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>      
+        </div>
+        
+        
+        <div class="page-footer__column">      
+          <h3 class="page-footer__column-title">Terms & Polices</h3>
+        
+          <ul class="page-footer__links-list">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms & conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>      
+        </div>
+        
+        
+        <div class="page-footer__column">      
+          <h3 class="page-footer__column-title">Social</h3>
+        
+          <ul class="page-footer__links-list">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Tumblr</a></li>
+          </ul>      
+        </div>
+
+      </footer>
+      <!-- / page footer -->
+
+    </div>
+    <!--~~~~~~    / FOOTER WRAPPER    ~~~~~-->
 
   </div>
-  <!-- center wrapper end -->
-
-</div>
-<!-- footer wrapper end -->
+  <!-- / center wrapper -->
 
   
 
-
-  <script src="js/script.js"></script>
+  <script>
+    // particlesJS.load('particles', 'js/particles.json');
+  </script>
 </body>
 </html>
