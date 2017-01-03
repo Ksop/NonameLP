@@ -1,28 +1,26 @@
 /* general styles 
 for body and typography */
 html {
-  font-size: 10px;
+  font-size: 7px;
 }
 
-@media (max-width: 767px) {
-  html {
-    font-size: 7px;
-  }
-}
-
-@media (max-width: 979px) {
+@media @tablet-width {
   html {
     font-size: 8px;
   }
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 980px) {
   html {
     font-size: 9px;
   }
 }
 
-
+@media @desktop-width {
+  html {
+    font-size: 10px;
+  }
+}
 
 body {
   font-family: "Inconsolata", serif;
@@ -56,19 +54,21 @@ h3 {
   background-image: url(../img/bg-blue-cloud.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: 0 40%;
+  background-position: 0 10%;
 }
 
 .particles {
   position: relative;
-  height: 138.75em;
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
 }
 
 .particles-inner {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  z-index: 1;
 }
 
 .layout-center-wrapper {
@@ -78,9 +78,32 @@ h3 {
   padding-right: 15px;
 }
 
-@media (min-width: 1280px) {
+@media @mobile-width-only {
+  .bg-blue-cloud {
+    background-size: 100% 50%;
+    background-position: 0 75%
+  }
+}
+
+@media @tablet-width and (max-width: 979px) {
+  .bg-blue-cloud {
+    background-position: 0 25%;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+  .bg-blue-cloud {
+    background-position: 0 17%;
+  }
+}
+
+@media @desktop-width {
   .layout-center-wrapper {
     width: 75em;
     margin: 0 auto;
-  }  
+  }
+
+  .bg-blue-cloud {
+    background-position: 0 10%;
+  }
 }

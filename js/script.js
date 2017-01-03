@@ -65,7 +65,7 @@ $( document ).ready(function() {
       var formWrap = '<div class="request-form-wrapper">' +
                        '<a href="#" id="request-form-close" class="request-form-close"></a>' +
                        '<form action="/" class="request-form">' +
-                         '<h2 class="request-form__title">Leave a request</h2>' +
+                         '<h3 class="request-form__title">Leave a request</h3>' +
                          '<label for="userName">Your name:</label>' +
                          '<input id="userName" type="text" placeholder="John" required/>' +                    
                          '<label for="email">Your email:</label>' +

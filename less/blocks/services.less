@@ -1,20 +1,6 @@
 .services {
-  .clearfix();
-  padding-top: 8.333em;
-  padding-bottom: 11.944em;;
+  margin-bottom: 11em;
   font-size: 1.8rem;
-
-  &__left-col {
-    float: left;
-    width: 25em;
-  }
-
-  &__right-col {
-    float: right;
-    width: 19.444em;
-    height: 30em;
-    margin-right: 8.125em; //чтобы при повороте list-item'a, блок подровнялся по center-wrapper
-  }
 }
 
 .services__title {
@@ -32,14 +18,13 @@
 
 .services__list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 37.813em; 
   margin: 0;
   padding: 0;
   list-style-type: none;
-  transform: rotate(30deg);
 }
 
 .services__list-item {
@@ -48,15 +33,10 @@
   align-items: center;
   width: 12.143em;
   height: 12.143em;
-  margin-right: 0.714em;
-  .remove-last-r-margin();
-  margin-bottom: 0.714em;
   font-size: 0.778em;
   text-align: center;
   background: @dark-blue;
   transition: all 200ms ease-in-out;
-
-  &:nth-child(2n) { margin-right: 0; }
 
   &:hover {
     color: @dark-blue;
@@ -65,7 +45,6 @@
 
   span {
     text-transform: uppercase;
-    transform: rotate(-30deg);
 
     &:before {
       display: block;
@@ -124,5 +103,87 @@
     width: 29px;
     height: 31px;
     .stitches-sprite(-10px, -474px, 29px, 31px);
+  }
+}
+
+@media (max-width: 530px) {
+  .services__title {
+    font-size: 1.7em;
+  }
+}
+
+@media @mobile-width-only {
+  .services__left-col {
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 5em;
+  }
+  .services__title {
+    text-align: center;
+
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .services__list {
+    padding-left: 0.7em;
+  }
+
+  .services__list-item {
+    margin-right: 2em;
+    transform: rotate(45deg);
+  }
+
+  .services__list-item span {
+    transform: rotate(-45deg);
+  }
+}
+
+@media @tablet-width {
+  .services {
+    margin-bottom: 14em;
+    .clearfix();
+
+    &__left-col {
+      float: left;
+      width: 25em;
+    }
+
+    &__right-col {
+      float: right;
+      width: 19.444em;
+      height: 30em;
+      margin-right: 8.125em; //чтобы при повороте list-item'a, блок подровнялся по center-wrapper
+    }
+  }
+
+  .services__list {
+    flex-direction: column;
+    height: 37.813em;
+    transform: rotate(30deg);
+  }
+
+  .services__list-item {
+    margin-right: 0.714em;
+    .remove-last-r-margin();    
+    margin-bottom: 0.714em;
+
+    &:nth-child(2n) { margin-right: 0; }
+  }
+
+  .services__list-item span {
+    transform: rotate(-30deg);
+  }
+}
+
+@media @tablet-width and (max-width: 979px) {
+  .services {
+    font-size: 1.5rem;
+  }
+
+  .services__title {
+    font-size: 2.4em;
   }
 }

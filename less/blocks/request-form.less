@@ -3,8 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 550px;
+  z-index: 99999;//выше навигации
+  width: 280px;
   animation-name: showForm;
   animation-duration: 1s;
   animation-timing-function: ease;
@@ -25,7 +25,7 @@
 .request-form-close {
   position: absolute;
   top: 0;
-  right: -4em;
+  right: 0;
   width: 4em;
   height: 4em;
   font-size: 1rem;
@@ -39,7 +39,7 @@
     left: 50%;
     width: 100%;
     height: .3em;
-    background-color: #fff;
+    background-color: #000;
     transform-origin: 50% 50%;
   }
 
@@ -60,7 +60,7 @@
 
 .request-form {
   padding: 3em;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 1.5em;
   color: @dark-blue;
   background-color: #fff;
@@ -70,6 +70,8 @@
   margin-top: 0;
   margin-bottom: 0.5em;
   color: @dark-blue;
+  font-size: 1.6em;
+  line-height: 1.5em;
 }
 
 .request-form label {
@@ -107,5 +109,35 @@
     color: @main-color;
     border-color: transparent;
     background-color: darken(@secondary-color, 10%);
+  }
+}
+
+@media @mobile-width-only {
+  .request-form__title {
+    text-align: left;
+  }
+}
+
+@media @tablet-width {
+  .request-form-wrapper {
+    width: 550px;
+  }
+
+  .request-form-close {
+    right: -4em;
+
+    &::after,
+    &::before {
+      background-color: #fff;
+    }
+  }
+
+  .request-form {
+    font-size: 1.6rem;
+  }
+
+  .request-form__title {
+    font-size: 3em;
+    text-align: center;
   }
 }

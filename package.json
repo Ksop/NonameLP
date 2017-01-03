@@ -2,6 +2,7 @@
   "name": "Noname-LP",
   "version": "0.1.0",
   "devDependencies": {
+    "connect-livereload": "^0.6.0",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-browser-sync": "^2.2.0",
