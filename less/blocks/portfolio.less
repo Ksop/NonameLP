@@ -1,14 +1,9 @@
 .portfolio-outer {
+  display: none;
   position: relative;
   font-size: 1rem;
-}
-
-@media (max-width: 1279px) {
-  .portfolio-outer {
-    margin-right: -15px;
-    margin-left: -15px;
-    margin-bottom: 10em;
-  }
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .portfolio-wrapper {
@@ -37,11 +32,12 @@
 /*
 Позиционирование внутри flex-элементов
 сделано на абсолютах, потому что вложенные
-флексбоксы при наведении начинают дергаться
+флексбоксы при наведении начинают заметно
+дергаться
 */
 .portfolio__list-item {
   position: relative;
-  width: 50em;
+  width: 47em;
   height: 55em;
   overflow: hidden;
 
@@ -67,18 +63,12 @@
   }
 }
 
-@media (max-width: 1279px) {
-  .portfolio__list-item {
-    width: 54em;
-  }
-}
-
 .portfolio__item-link {
   position: absolute;
   top: 50%;
   left: 50%;
   display: block;
-  transform: translate(-50%, -50%) skewX(30deg);
+  transform: translate(-54%, -50%) skewX(30deg);
 
   //голубой фон
   &::after {
@@ -119,4 +109,26 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 980px) {
+  .portfolio-outer {
+    display: block;
+  }
+
+  .portfolio__list-item {
+    width: 52em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .portfolio-outer {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .portfolio__list-item {
+    width: 54em;
+  }
 }

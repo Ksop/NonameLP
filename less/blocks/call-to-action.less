@@ -1,7 +1,8 @@
 .call-to-action {
   position: relative;
   text-align: center;
-  background: #171c24;
+  background-color: #171c24;
+  transition: background-color 400ms ease;
 
   &__link {
     display: block;
@@ -13,5 +14,9 @@
     line-height: 1.5em;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: lighten(#171c24, 2%);
   }
 }

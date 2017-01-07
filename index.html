@@ -200,7 +200,9 @@
           </li>
         </ul>
 
-        <a class="btn  btn--bg-blue">Explore more case stydies</a>
+        <div class="projects__btn">
+          <a class="btn  btn--bg-blue">Explore more case stydies</a>
+        </div>
 
       </section>
       <!--~~~~~    / PROJECTS     ~~~~~-->
@@ -251,10 +253,15 @@
     </div>
     <!--~~~~~    / PORTFOLIO OUTER    ~~~~~-->
 
+  </div>
+  <!-- / center wrapper -->
 
+  
 
-    <!--~~~~~~      TESTIMONIALS WRAP    ~~~~~-->
-    <div class="testimonials-wrap">
+  <!--~~~~~~      TESTIMONIALS WRAP    ~~~~~-->
+  <div class="testimonials-wrap">
+
+    <div class="layout-center-wrapper">
 
       <div id="testimonials" class="testimonials">
       
@@ -309,18 +316,22 @@
       <!-- / testimonials -->
 
     </div>
-    <!--~~~~~~    / TESTIMONIALS WRAP    ~~~~~-->
+    <!-- / center wrapper -->
 
+  </div>
+  <!--~~~~~~    / TESTIMONIALS WRAP    ~~~~~-->
 
+ 
+
+  <div class="layout-center-wrapper">
 
     <!-- CALL TO ACTION -->
     <div class="call-to-action  js-show-form">
       <a href="#" class="call-to-action__link">Request consultation</a>
     </div>
     <!-- / CALL TO ACTION -->
+  
 
-
-    
     <!--~~~~~~     FOOTER WRAPPER    ~~~~~-->
     <div class="footer-wrapper">
 
@@ -331,24 +342,11 @@
           <h3 class="page-footer__column-title">Who we are?</h3>
         
           <ul class="page-footer__links-list">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Our clients</a></li>
-            <li><a href="#">Press releases</a></li>
-            <li><a href="#">Video portfolio</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>      
-        </div>
-        
-        
-        <div class="page-footer__column">      
-          <h3 class="page-footer__column-title">How we work?</h3>
-        
-          <ul class="page-footer__links-list">
-            <li><a href="#">Strategy</a></li>
-            <li><a href="#">Creative</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Ebooks & publishes</a></li>
-            <li><a href="#">Press</a></li>
+            <li><a href="#features">Why us?</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Case stydies</a></li>
+            <li><a href="#portfolio">Video portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
           </ul>      
         </div>
         
@@ -357,9 +355,9 @@
           <h3 class="page-footer__column-title">Terms & Polices</h3>
         
           <ul class="page-footer__links-list">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Terms & conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a>FAQ</a></li>
+            <li><a>Terms & conditions</a></li>
+            <li><a>Privacy Policy</a></li>
           </ul>      
         </div>
         
@@ -368,10 +366,9 @@
           <h3 class="page-footer__column-title">Social</h3>
         
           <ul class="page-footer__links-list">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Tumblr</a></li>
+            <li><a>Facebook</a></li>
+            <li><a>Twitter</a></li>
+            <li><a>Instagram</a></li>
           </ul>      
         </div>
 
@@ -387,7 +384,9 @@
   
 
   <script>
-    particlesJS.load('particles', 'js/particles.json');
+    if (screen.width > 767) {
+      particlesJS.load('particles', 'js/particles.json');
+    }
   </script>
 </body>
 </html>

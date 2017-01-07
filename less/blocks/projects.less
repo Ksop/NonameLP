@@ -1,14 +1,13 @@
 .projects {
-  padding-left: 2.7em;
-  padding-right: 2.7em;
   margin-bottom: 2.778em;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-align: center;
 }
 
 .projects__title {
   margin-top: 0;
   margin-bottom: 2.222em;
+  font-size: 2.813em;
   text-align: center;
 
   &:after {
@@ -22,16 +21,14 @@
   }
 }
 
-//1200 = 320 * 3 + gutter
-
 .projects__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0;
-  margin-bottom: 5.556em;
   padding: 0;
   list-style-type: none;
+  font-size: 4rem;
 }
 
 .projects__list-item {
@@ -39,23 +36,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12.444em;
-  height: 12.444em;
+  width: 10.444em;
+  height: 10.444em;
+  margin-bottom: 2em;
   overflow: hidden;
-  transform: rotate(30deg);
-}
-
-@media (max-width: 1099px) {
-  .projects__list-item {
-    width: 10.444em;
-    height: 10.444em;
+  
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
 .projects__item-link {
   color: @main-color;
   text-decoration: none;
-  transform: rotate(-30deg);
 
   &:hover .projects__item-descr {
     transform: translate(-50%, -50%)
@@ -103,3 +96,73 @@
   line-height: 1.5em;
 }
 
+.projects__btn {
+  font-size: 1.298em;
+}
+
+@media (max-width: 599px) {
+  .projects__list {
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 979px) {
+
+  .projects__list {
+    font-size: 3.5rem;
+  }
+
+  .projects__list-item {
+    &:nth-child(odd) {
+      margin-right: 2em;
+    }
+  }
+}
+
+@media (min-width: 980px) {
+
+  .projects__list {
+    justify-content: space-around;
+    margin-bottom: 3em;
+    font-size: 2rem;
+  }
+
+  .projects__list-item { transform: rotate(30deg); }
+  .projects__item-link { transform: rotate(-30deg); }
+  .projects__btn { font-size: 0.7em; }
+}
+
+/* @media (max-width: 599px) {
+  .projects__list {
+    justify-content: center;
+    margin-bottom: 1.5em;
+  }
+
+  .projects__list-item {
+    margin-bottom: 2.4em;
+  }
+
+  // .projects__descr-category { font-size: 2em; }
+
+  // .projects__descr-name { font-size: 3em; }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .projects {
+    font-size: 1.5rem;
+  }
+
+  .projects__list {
+    justify-content: center;
+    margin-bottom: 1.5em
+  }
+
+  .projects__list-item {
+    margin-bottom: 2.4em;
+
+    &:nth-child(odd) {
+      margin-right: 2.4em;
+    }
+  }
+}
+*/

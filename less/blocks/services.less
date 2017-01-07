@@ -1,11 +1,12 @@
 .services {
   margin-bottom: 11em;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .services__title {
   margin-top: 0;
   margin-bottom: 40px;
+  font-size: 2.813em;
   .small-underline();
 }
 
@@ -106,12 +107,6 @@
   }
 }
 
-@media (max-width: 530px) {
-  .services__title {
-    font-size: 1.7em;
-  }
-}
-
 @media @mobile-width-only {
   .services__left-col {
     padding-left: 2em;
@@ -138,6 +133,12 @@
 
   .services__list-item span {
     transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+  .services {
+    font-size: 2.5rem;
   }
 }
 
@@ -179,10 +180,6 @@
 }
 
 @media @tablet-width and (max-width: 979px) {
-  .services {
-    font-size: 1.5rem;
-  }
-
   .services__title {
     font-size: 2.4em;
   }

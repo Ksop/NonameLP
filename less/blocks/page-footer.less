@@ -6,6 +6,10 @@
   font-size: 1.4rem;
 }
 
+.page-footer__column {
+  // width: 25%;
+}
+
 .page-footer__column-title {
   margin-top: 0;
   margin-bottom: 1.429em;
@@ -27,5 +31,24 @@
     text-decoration: none;
 
     &:hover { text-decoration: underline; }
+  }
+}
+
+@media (max-width: 400px) {
+  .page-footer {
+    flex-direction: column;
+    padding-top: 2.471em;
+    padding-bottom: 0;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .page-footer__column {
+    margin-bottom: 2em;
+  }
+
+  .page-footer__column-title {
+    margin-bottom: .5em;
   }
 }
